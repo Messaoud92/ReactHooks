@@ -4,17 +4,16 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import ReactStars from 'react-stars';
-import ReactStars from "react-rating-stars-component";
-// import { render } from "react-dom";
+import ReactStars from 'react-rating-stars-component'
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navb() {
+function Navb({settext}) {
   return (
     <>
     
-    <Navbar sticky='top' bg="dark" variant="dark" expand="lg">
+    <Navbar bg="dark" expand="lg" variant='dark'>
       <Container fluid>
-        <Navbar.Brand href="#">Movie-List-Checkpoint</Navbar.Brand>
+        <Navbar.Brand href="#">Movie app</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -23,15 +22,17 @@ function Navb() {
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link href="#action2">Contact</Nav.Link>
+            <Nav.Link href="#action2"> About </Nav.Link>
           </Nav>
-          <ReactStars count={5} size={24} activeColor="#ffd700"/>
+          <div style={{gap:'10px'}}><ReactStars count={5} size={24} activeColor="#ffd700"/></div>
           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange= {(e)=>settext(e.target.value)}
             />
             <Button variant="outline-success">Search</Button>
           </Form>
