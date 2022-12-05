@@ -21,9 +21,9 @@ function Navb({settext}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Contact</Nav.Link>
-            <Nav.Link href="#action2"> About </Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/about"> About </Nav.Link>
           </Nav>
           <div style={{gap:'10px'}}><ReactStars count={5} size={24} activeColor="#ffd700"/></div>
           <Form className="d-flex">

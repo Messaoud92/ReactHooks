@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import { Routes, Route } from "react-router-dom"
 import './App.css';
 import Navb from './Components/Navb';
+import Trailler from './Components/Trailler';
+import Contact from './Components/Contact';
+import About from './Components/About';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MovieList from './Components/MovieList';
 
 function App() {
   const [movies, setmovies] = useState([ 
     {
+    id : Math.random(),
     name: "beasts of no nation",
     posterurl:
       "https://occ-0-1723-92.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABQcsOKPBHHBH4i2JGy0OJI3l4blWwCHjoewRWeLWaZ_n6yzjtW56apfhfQcc2Pb2WGfEAs2Qgs71OA4oTEocr3LZTPcE.jpg?r=b78",
@@ -15,6 +20,7 @@ function App() {
     rating: 5,
   },
   {
+    id : Math.random(),
     name: "13 hours in benghazi",
     posterurl:
       "https://occ-0-1068-1722.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABRse3fgA3r6z5xMgjuVJlZlaXk8VKMNHxTV6f6_hcHVoTOwQka7dA48iui2uaWf77kkExQVywKkNVDwEB9T4Z9ofiTrl.jpg?r=44a",
@@ -23,6 +29,7 @@ function App() {
     rating: 4,
   },
   {
+    id : Math.random(),
     name: "The Circle",
     posterurl:
       "https://img.republicworld.com/republic-prod/stories/images/15982586965f437e08b6fa9.jpeg",
@@ -31,6 +38,7 @@ function App() {
     rating: 2,
   },
   {
+    id : Math.random(),
     name: "Inception",
     posterurl:
       "https://static2.srcdn.com/wordpress/wp-content/uploads/2020/03/Inception-characters-film-crew.jpg",
@@ -39,6 +47,7 @@ function App() {
     rating: 3,
   },
   {
+    id : Math.random(),
     name: "Shutter Island",
     posterurl:
       "https://images.squarespace-cdn.com/content/v1/5b76c81055b02cf394f9ece5/1573132285768-0ALN9MWORAVTHBW7UBVI/ke17ZwdGBToddI8pDm48kNovdPSmLXrGMIo6NKEdEUEUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcwA5BL7WQp-UtG0T9B_ANEONHo-Gj1DAsyRwVYWk8R2xfkNmKPWrmaFhthYewTpvH/Shutter%2BIsland%2B1.jpg?format=1000w",
@@ -47,6 +56,7 @@ function App() {
     rating: 5,
   },
   {
+    id : Math.random(),
     name: "Warcraft",
     posterurl:
       "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-243610-8J07_WF0170_COMP_143639R_G_SRGB_000000_HR.jpg",
@@ -55,6 +65,7 @@ function App() {
     rating: 1,
   },
   {
+    id : Math.random(),
     name: "The Godfather",
     posterurl:
       "https://m.media-amazon.com/images/M/MV5BYWNlN2U4YjQtMzI3NC00ZjkxLWEwMTItYWRlNDUxYTYwYjVlXkEyXkFqcGdeQWpvaG5oYXJ0._V1_UX477_CR0,0,477,268_AL_.jpg",
@@ -63,6 +74,7 @@ function App() {
     rating: 5,
   },
   {
+    id : Math.random(),
     name: "Taxi Driver",
     posterurl:
       "https://www.indiewire.com/wp-content/uploads/2016/04/taxi-driver-1.jpg?w=670&h=377&crop=1",
@@ -71,6 +83,7 @@ function App() {
     rating: 3,
   },
   {
+    id : Math.random(),
     name: "Fight Club",
     posterurl:
       "https://img.huffingtonpost.com/asset/5bb49916220000ba01dc2840.jpeg?ops=scalefit_630_noupscale",
@@ -79,6 +92,7 @@ function App() {
     rating: 5,
   },
   {
+    id : Math.random(),
     name: "The Lord of the Rings",
     posterurl:
       "https://imgix.bustle.com/uploads/image/2020/1/21/7f69561d-3863-4b82-8196-f6bfd3074f03-lord-of-the-rings-frodo-sam-ftr.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg",
@@ -88,6 +102,7 @@ function App() {
   },
 
   {
+    id : Math.random(),
     name: "Dachra",
     posterurl:
       "https://cdn.nawaat.org/wp-content/uploads/2018/11/DACHRA-3-2000px.jpg",
@@ -96,6 +111,7 @@ function App() {
     rating: 5,
   },
   {
+    id : Math.random(),
     name: "Paper Lives",
     posterurl:
       "http://www.doyouknowturkey.com/wp-content/uploads/2021/02/C%CC%A7ag%CC%86atay-Ulusoy-is-acting-as-Mehmet-in-Kag%CC%86ittan-Hayatlar-Papar-Lives-Turkish-original-film-on-Netflix.jpg",
@@ -104,6 +120,7 @@ function App() {
     rating: 2,
   },
   {
+    id : Math.random(),
     name: "Seaspiracy",
     posterurl:
       "https://i.guim.co.uk/img/media/0b019b69ec3c618610bd78a84f39e491ac65fde2/120_0_3600_2160/master/3600.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=f792f8e3427117d08ad88b2dc68d68ae",
@@ -115,7 +132,12 @@ const [text, settext] = useState("");
   return (
     <div >
         <Navb settext={settext}/>
-        <MovieList movies = {movies} setmovies={setmovies} text={text}/>
+        <Routes>
+            <Route path="/home" element={ <MovieList movies = {movies} setmovies={setmovies} text={text}/>  } />
+            <Route path="/about" element={ <About/> } />
+            <Route path="/contact" element={ <Contact/> } />
+            <Route path="/trailler/: id" element={ <Trailler movies={movies}/> } />
+        </Routes>
     </div>
   );
 }
