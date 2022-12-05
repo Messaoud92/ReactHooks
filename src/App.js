@@ -136,7 +136,7 @@ const [text, settext] = useState("");
             <Route path="/home" element={ <MovieList movies = {movies} setmovies={setmovies} text={text}/>  } />
             <Route path="/about" element={ <About/> } />
             <Route path="/contact" element={ <Contact/> } />
-            <Route path="/trailler/: id" element={ <Trailler movies={movies}/> } />
+            <Route path="/trailler/:name" element={ <Trailler movies={movies}/> } />
         </Routes>
     </div>
   );

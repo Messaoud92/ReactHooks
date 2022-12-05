@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function MovieCard({movie}) {
   return (
     <div >
-      <Link to={`/trailler/${movie.id}`} style ={{ textDecoration: "none" , color :"black"}}>
+      <Link to={`/trailler/${movie.name}`} style ={{ textDecoration: "none" , color :"black"}}>
             <Card style={{ width: '18rem' ,margin: '8px' }}>
       <Card.Img variant="top" src={movie.posterurl} />
       <Card.Body>

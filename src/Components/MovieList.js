@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 
 
 function MovieList({movies , setmovies,text}) {
-    console.log(movies);
+    
   return (
     
   <div> 
